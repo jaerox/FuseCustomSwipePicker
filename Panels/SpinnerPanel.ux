@@ -1,0 +1,27 @@
+<Panel ux:Class="kr.co.mgcreative.example.Panels.SpinnerPanel" ux:Name="spinnerPanel" Width="100%" Height="82" Alignment="Center" HitTestMode="LocalBoundsAndChildren" ClipToBounds="false">
+	<EnteringAnimation Scale="0.25">
+		<Move RelativeTo="Size" KeyframeInterpolation="CatmullRom">
+			<Keyframe Y="-1" Time="0.25" />
+			<Keyframe Y="-1.8" Time="0.5" />
+			<Keyframe Y="-2.4" Time="0.75" />
+			<Keyframe Y="-4" Time="1" />
+		</Move>
+		<Change spinnerPanel.Opacity="0" Duration="0.75" Easing="QuadraticInOut" />
+		<Change label.TextColor="#FFF" Duration="0.2" Easing="QuadraticInOut" />
+		<Scale Factor="0.1" Duration="1" />
+	</EnteringAnimation>
+	<ExitingAnimation Scale="0.25">
+		<Move RelativeTo="Size" KeyframeInterpolation="CatmullRom">
+			<Keyframe Y="1" Time="0.25" />
+			<Keyframe Y="1.8" Time="0.5" />
+			<Keyframe Y="2.4" Time="0.75" />
+			<Keyframe Y="4" Time="1" />
+		</Move>
+		<Change spinnerPanel.Opacity="0" Duration="0.75" Easing="QuadraticInOut" />
+		<Change label.TextColor="#FFF" Duration="0.2" Easing="QuadraticInOut" />
+		<Scale Factor="0.1" Duration="1" />
+	</ExitingAnimation>
+
+	<Text ux:Name="label" Alignment="Center" Font="{font}" FontSize="{fontSize}" TextColor="{textColor}" TextAlignment="Center" TextTruncation="None" Value="{label}" />
+	<Panel Width="100%" Height="120%" HitTestMode="LocalBounds" />
+</Panel>

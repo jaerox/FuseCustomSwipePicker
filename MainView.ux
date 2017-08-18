@@ -1,0 +1,62 @@
+<App>
+	<JavaScript>
+		var Observable = require('FuseJS/Observable');
+
+		module.exports = {
+			
+		};
+	</JavaScript>
+
+	<JavaScript File="MainView.js" />
+
+	<Font File="Assets/Fonts/Roboto-Bold.ttf" ux:Global="RobotoBold" />
+
+	<DockPanel Background="#391D6A">
+		<Panel xmlns:m="kr.co.mgcreative.example" Background="#391D6A" Transition="None">
+			<PageControl ux:Name="mainPageControl" Active="StartDatePage">
+				<Page HitTestMode="LocalBoundsAndChildren" ClipToBounds="true" ux:Name="StartDatePage">
+					<Panel Width="100%" Height="61.271676300578%" Y="11.4%" Alignment="TopCenter">
+						<Grid ColumnCount="3" Columns="2*,1*,1*" Height="20%">
+							<Panel>
+								<LinearNavigation ux:Name="dateYearNavigation" ActiveIndex="{fv_startDateYearActiveIndex}" />
+								<SwipeNavigate ForwardDirection="Down" MaxPages="50" />
+
+								<Each Items="{fv_startDateYearList}">
+									<m:Panels.SpinnerPanel>
+										<WhileActive>
+											<Callback Handler="{fn_onMyPlanStartDateYearActive}" />
+										</WhileActive>
+									</m:Panels.SpinnerPanel>
+								</Each>
+							</Panel>
+							<Panel>
+								<LinearNavigation ux:Name="startDateMonthNavigation" ActiveIndex="{fv_startDateMonthActiveIndex}" />
+								<SwipeNavigate ForwardDirection="Down" MaxPages="20" />
+
+								<Each Items="{fv_startDateMonthList}">
+									<m:Panels.SpinnerPanel>
+										<WhileActive>
+											<Callback Handler="{fn_onMyPlanStartDateMonthActive}" />
+										</WhileActive>
+									</m:Panels.SpinnerPanel>
+								</Each>
+							</Panel>
+							<Panel>
+								<LinearNavigation ux:Name="startDateDayNavigation" ActiveIndex="{fv_startDateDayActiveIndex}" />
+								<SwipeNavigate ForwardDirection="Down" MaxPages="20" />
+
+								<Each Items="{fv_startDateDayList}">
+									<m:Panels.SpinnerPanel>
+										<WhileActive>
+											<Callback Handler="{fn_onMyPlanStartDateDayActive}" />
+										</WhileActive>
+									</m:Panels.SpinnerPanel>
+								</Each>
+							</Panel>
+						</Grid>
+					</Panel>
+				</Page>
+			</PageControl>
+		</Panel>
+	</DockPanel>
+</App>
