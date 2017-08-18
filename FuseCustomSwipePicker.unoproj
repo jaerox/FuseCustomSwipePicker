@@ -28,7 +28,7 @@
     "Package": "$(RootNamespace)",
     "PreviewPackage": "$(RootNamespace).preview",
 
-  	"VersionName": "$(Version)",
+    "VersionName": "$(Version)",
     "VersionCode": "$(VersionCode)"
   },
 
@@ -37,10 +37,10 @@
   "iOS": {
     "BundleName": "$(Title)",
 
-  	"BundleIdentifier": "$(RootNamespace)",
+    "BundleIdentifier": "$(RootNamespace)",
     "PreviewBundleIdentifier": "$(RootNamespace).preview",
 
-  	"BundleVersion": "$(Version)",
+    "BundleVersion": "$(Version)",
 
     "DeploymentTarget": "8.0"
   }
