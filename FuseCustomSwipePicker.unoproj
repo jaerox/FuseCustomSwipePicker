@@ -29,14 +29,7 @@
     "PreviewPackage": "$(RootNamespace).preview",
 
   	"VersionName": "$(Version)",
-    "VersionCode": "$(VersionCode)",
-
-    "SDK": {
-      "BuildToolsVersion": "23.0.3",
-      "CompileVersion": 23,
-      "MinVersion": 14,
-      "TargetVersion": 22
-    }
+    "VersionCode": "$(VersionCode)"
   },
 
 
